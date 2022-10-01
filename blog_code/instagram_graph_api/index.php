@@ -10,6 +10,6 @@
 <h1>Instagram Basic Display API</h1>
 <hr />
 
-<a href="<?php $ig->authorizationUrl; ?>">
+<a href="<?php echo $ig->authorizationUrl; ?>">
   Authorize w/Instagram
 </a>
