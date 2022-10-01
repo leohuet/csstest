@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+  ></script>
+
+
+</head>
+
+<header>
+
+</header>
+
+<body>
+
+<div><a class="link-block" id="link-block" href="https://instagram.com/halone.art" target="_blank"></div>
+
+<button id="blackhole" class="blackhole-animated" onclick="quiSaitAttendre()"> blackhole ! </button>
+<button id="flowfield" class="flowfield-animated" onclick="quiSaitAttendre()"> flowfield ! </button>
+<button id="seism" class="seism-animated" onclick="quiSaitAttendre()"> seism ! </button>
+<button id="cube" class="cube-animated" onclick="quiSaitAttendre()"> cube ! </button>
+
+
+<style>
+
+#link-block {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+#button {
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  opacity: 100%;
+}
+
+#blackhole {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: blue;
+  opacity: 100%
+}
+
+#cube {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: green;
+  opacity: 0%
+}
+
+#flowfield {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: red;
+  opacity: 0%
+}
+
+#seism {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: black;
+  opacity: 0%
+}
+
+@-webkit-keyframes blackhole-anim {
+  0% {
+    -webkit-opacity: 100%;
+  }
+  12.5% {
+    -webkit-opacity: 100%;
+    }
+  25% {
+    -webkit-opacity: 0%;
+  }
+  87.5% {
+    -webkit-opacity: 0%;
+  }
+  100% {
+    -webkit-opacity: 100%;
+  }
+}
+
+@-webkit-keyframes flowfield-anim {
+  0% {
+    -webkit-opacity: 0%;
+  }
+  37.5% {
+    -webkit-opacity: 0%;
+    }
+  50% {
+    -webkit-opacity: 100%;
+  }
+  62.5% {
+    -webkit-opacity: 100%;
+  }
+  75% {
+    -webkit-opacity: 0%;
+  }
+  100% {
+    -webkit-opacity: 0%;
+  }
+}
+
+@-webkit-keyframes seism-anim {
+  0% {
+    -webkit-opacity: 0%;
+  }
+  62.5% {
+    -webkit-opacity: 0%;
+  }
+  75% {
+    -webkit-opacity: 100%;
+  }
+  87.5% {
+    -webkit-opacity: 100%;
+  }
+  100% {
+    -webkit-opacity: 0%;
+  }
+}
+
+@-webkit-keyframes cube-anim {
+  0% {
+    -webkit-opacity: 0%;
+  }
+  12.5% {
+    -webkit-opacity: 0%;
+    }
+  37.5% {
+    -webkit-opacity: 100%;
+  }
+  50% {
+    -webkit-opacity: 0%;
+  }
+  100% {
+    -webkit-opacity: 0%;
+  }
+}
+
+.blackhole-animated {
+-webkit-animation-name: blackhole-anim;
+-webkit-animation-duration: 32s;
+-webkit-animation-iteration-count: infinite;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+.flowfield-animated {
+-webkit-animation-name: flowfield-anim;
+-webkit-animation-duration: 32s;
+-webkit-animation-iteration-count: infinite;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+.seism-animated {
+-webkit-animation-name: seism-anim;
+-webkit-animation-duration: 32s;
+-webkit-animation-iteration-count: infinite;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+.cube-animated {
+-webkit-animation-name: cube-anim;
+-webkit-animation-duration: 32s;
+-webkit-animation-iteration-count: infinite;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var count = 0;
+let link = document.getElementById("link-block");
+var progressBarId = setInterval(animLink, 1000);
+
+function animLink(){
+  count += 1;
+  console.log(count);
+  if(count == 7) {
+    $(".link-block").attr("href","https://instagram.com/lowemusique");
+  }
+  if(count == 14) {
+    $(".link-block").attr("href","https://google.com");
+  }
+  if(count == 22) {
+    $(".link-block").attr("href","https://halone.art");
+  }
+  if(count == 30) {
+    count = 0;
+    $(".link-block").attr("href","https://instagram.com/halone.art");
+  }
+}
+
+function quiSaitAttendre(){
+  console.log('clicked');
+}
+
+</script>
